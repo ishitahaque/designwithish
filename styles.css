@@ -188,6 +188,27 @@ main > section:last-child { border-bottom: 0; }
   padding: 1rem 1.1rem;
   font: 400 0.8125rem var(--font-display);
 }
+.project-embed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+  padding: 1.5rem;
+  background: var(--concrete);
+}
+.project-embed .instagram-media {
+  margin: 0 !important;
+  width: 100%;
+  max-width: 380px !important;
+  min-width: 0 !important;
+}
+/* Shown only until Instagram's script swaps in the reel, or if it is blocked */
+.project-embed blockquote.instagram-media {
+  padding: 2rem 1.5rem;
+  background: var(--oat);
+  font: 500 1rem var(--font-display);
+  text-align: center;
+}
 .project-image.has-photo { aspect-ratio: 4 / 5; padding: 0; }
 .project-image img { width: 100%; height: 100%; object-fit: cover; }
 .project-gallery {
