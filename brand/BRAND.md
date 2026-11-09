@@ -41,7 +41,15 @@ https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Lora:it
 
 ## Mark
 
-Two 14px squares, Moss then Honey, 4px apart, sitting above or left of the lowercase wordmark. Files in `brand/logo/`.
+**Room and light.** An outlined square (the room, 2px stroke in Charcoal or Oat depending on ground) with a single Honey square in the lower-right corner (where the light falls). The mark sits above the lowercase wordmark in lockups, or stands alone as favicon and avatar.
+
+Files in `brand/logo/`:
+- `mark-dark.svg` / `mark-light.svg` — the mark alone, for light and dark grounds. PNG exports at 400px alongside.
+- `wordmark-dark.svg` / `wordmark-light.svg` — mark + wordmark lockup. Requires Archivo to be loaded; for print, convert text to outlines first.
+- `favicon.svg` (+ `favicon-512.png`) — Charcoal tile with the light mark. Also copied to the site root.
+- `avatar.svg` (+ `avatar-1024.png`) — Oat tile with the dark mark, for Instagram, LinkedIn, etc.
+
+Minimum size for the mark: 20px. Keep the Honey square at roughly a quarter of the room's width; never let it touch the outline.
 
 ## Voice
 
