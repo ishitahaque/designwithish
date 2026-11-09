@@ -352,3 +352,38 @@ main > section:last-child { border-bottom: 0; }
 
 /* The walkthrough is taller than the photos: show the whole frame instead of cropping it */
 .project-gallery video.gallery-video { object-fit: contain; background: transparent; }
+
+/* ---- Sizing pass: keep the page and its photos at a comfortable size on large screens ---- */
+.site-header,
+.site-footer,
+main > section { padding-inline: max(var(--gutter), calc(50vw - 520px)); }
+
+.hero-image { justify-self: start; width: 100%; max-width: 15rem; }
+@media (min-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); }
+  .hero-image { justify-self: end; max-width: 20rem; }
+}
+
+.project-image.has-photo { width: 100%; max-width: 17rem; }
+.project-image.has-photo.landscape { max-width: 30rem; }
+@media (min-width: 820px) {
+  .project { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+  .project:nth-of-type(even) { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+  .project-image.has-photo { max-width: 21rem; }
+  .project-image.has-photo.landscape { max-width: none; }
+}
+
+.project-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; max-width: 46rem; }
+@media (min-width: 820px) { .project-gallery { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; max-width: none; } }
+.project-gallery.landscape { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 46rem; }
+@media (min-width: 820px) { .project-gallery.landscape { max-width: 46rem; } }
+.project-gallery:not(.landscape):has(> :nth-child(3):last-child) { max-width: 30rem; }
+@media (min-width: 820px) { .project-gallery:not(.landscape):has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.project-gallery img.gallery-tall { object-fit: contain; background: transparent; }
+
+.about-image { width: 100%; max-width: 15rem; }
+@media (min-width: 900px) {
+  .about { grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr); }
+  .about-image { max-width: 19rem; }
+}
+.contact-image img { max-width: 14rem; }
