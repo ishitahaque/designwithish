@@ -73,7 +73,7 @@ Colors, fonts, logo files, and voice rules live in `brand/` (start with `brand/B
 ## Still to do
 
 - **Project photos**: each project in `work.html` has a colored `project-image` block that says "Photos coming soon". Replace the `<span>` with `<img src="assets/your-photo.jpg" alt="...">` and remove the `tone-*` class.
-- **Prices**: the three package prices in the Services section are starting suggestions. Edit them in `services.html`.
+- **Prices**: none are listed; projects are quoted individually. Add them to `services.html` when you are ready.
 
 ## Editing
 
