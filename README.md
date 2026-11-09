@@ -60,15 +60,15 @@ dig www.designwithish.com +noall +answer
 
 The four A records are GitHub's published Pages addresses. If GitHub changes them, the current list is in their docs under "Managing a custom domain for your GitHub Pages site".
 
-## Before going live
+## Brand
 
-- **Contact form**: `index.html` posts to `https://formspree.io/f/YOUR_FORM_ID`. Create a free form at formspree.io and paste its ID, or swap the form for a plain `mailto:` link.
-- **Email**: `hello@designwithish.com` appears in two places. Change it or set up that mailbox at your registrar.
-- **Portrait**: replace `assets/portrait.jpg` (480×600 or any 4:5 image) and delete the caption under it.
-- **Work list**: each `<a class="work-row">` has a `--swatch` color and a placeholder `href="#"`. Point them at case-study pages or PDFs when ready.
-- **Prices and dates**: the service prices and "Booking projects for January 2027" line are placeholders.
-- **Social links** in the footer point at the LinkedIn and Dribbble home pages.
+Colors, fonts, logo files, and voice rules live in `brand/` (start with `brand/BRAND.md`). `styles.css` reads its colors and fonts from `brand/tokens.css`.
+
+## Still to do
+
+- **Project photos**: each project in `index.html` has a colored `project-image` block that says "Photos coming soon". Replace the `<span>` with `<img src="assets/your-photo.jpg" alt="...">` and remove the `tone-*` class.
+- **Prices**: the three package prices in the Services section are starting suggestions. Edit them in `index.html`.
 
 ## Editing
 
-Fonts and the color palette are CSS variables at the top of `styles.css`. Sections are plain `<section>` blocks in `index.html`; delete or reorder them freely, and update the nav links to match.
+Sections are plain `<section>` blocks in `index.html`; delete or reorder them freely, and update the nav links to match.
