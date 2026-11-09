@@ -347,3 +347,5 @@ main > section:last-child { border-bottom: 0; }
 .project-gallery.landscape { grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 620px) { .project-gallery.landscape { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .project-gallery.landscape img { aspect-ratio: 3 / 2; }
+
+.project-reel { order: 4; grid-column: 1 / -1; min-height: 0; padding: 2rem 1.5rem; }
