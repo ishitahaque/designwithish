@@ -3,10 +3,16 @@
 Static site: plain HTML, CSS, and a few lines of JavaScript. No build step.
 
 ```
-index.html      the whole site (one page, anchored sections)
-styles.css      all styling; palette and fonts are defined at the top
+index.html      home: headline, menu, loft photo and portrait
+work.html       the three projects
+services.html   the three packages
+process.html    how a project runs
+about.html      bio
+contact.html    email and Instagram
+styles.css      all styling
 script.js       mobile menu + footer year
-assets/         images (replace portrait.jpg with your photo)
+brand/          brand spec, color/font tokens, logo files
+assets/         photos
 CNAME           tells GitHub Pages which domain to serve
 .nojekyll       stops GitHub from running Jekyll on the files
 ```
@@ -66,9 +72,9 @@ Colors, fonts, logo files, and voice rules live in `brand/` (start with `brand/B
 
 ## Still to do
 
-- **Project photos**: each project in `index.html` has a colored `project-image` block that says "Photos coming soon". Replace the `<span>` with `<img src="assets/your-photo.jpg" alt="...">` and remove the `tone-*` class.
-- **Prices**: the three package prices in the Services section are starting suggestions. Edit them in `index.html`.
+- **Project photos**: each project in `work.html` has a colored `project-image` block that says "Photos coming soon". Replace the `<span>` with `<img src="assets/your-photo.jpg" alt="...">` and remove the `tone-*` class.
+- **Prices**: the three package prices in the Services section are starting suggestions. Edit them in `services.html`.
 
 ## Editing
 
-Sections are plain `<section>` blocks in `index.html`; delete or reorder them freely, and update the nav links to match.
+Each page is its own HTML file with the same header and footer. If you add or rename a page, update the menu in every file's header and the menu list on `index.html`.
