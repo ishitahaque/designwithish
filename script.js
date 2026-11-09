@@ -22,3 +22,12 @@ if (toggle && nav) {
 // Keep the footer year current
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
+// Respect reduced-motion: hold videos on their poster and offer controls instead
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('video[autoplay]').forEach((v) => {
+    v.removeAttribute('autoplay');
+    v.pause();
+    v.controls = true;
+  });
+}

@@ -196,8 +196,9 @@ main > section:last-child { border-bottom: 0; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
-@media (min-width: 820px) { .project-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; } }
-.project-gallery img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
+@media (min-width: 820px) { .project-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; } }
+.project-gallery img,
+.project-gallery video { display: block; aspect-ratio: 3 / 4; object-fit: cover; width: 100%; height: auto; background: var(--concrete); }
 .tone-concrete { background: var(--concrete); color: var(--charcoal); }
 .tone-honey { background: var(--honey); color: var(--charcoal); }
 .tone-moss { background: var(--moss); color: var(--oat); }
