@@ -5,8 +5,10 @@ Static site: plain HTML, CSS, and a few lines of JavaScript. No build step.
 ```
 index.html      home: headline, menu, loft photo and portrait
 work.html       the three projects
-services.html   the three packages
-process.html    how a project runs
+services.html   the three packages and how a project runs
+process.html    redirects to the How it works section of services.html
+sitemap.xml     page list for search engines
+robots.txt      points search engines at the sitemap
 about.html      bio
 contact.html    email and Instagram
 styles.css      all styling
