@@ -586,3 +586,37 @@ main > section.ed-hero { display: grid; gap: 2.5rem; align-items: end; padding-b
 
 .page-home .site-header, .page-home .site-footer, .page-home main > section.next,
 .page-feature .site-header, .page-feature .site-footer, .page-feature main > section.next { padding-inline: max(var(--gutter), calc(50vw - 600px)); }
+
+/* Feature: landscape modules, reel, and the About page */
+.feature-wide img { aspect-ratio: 3 / 2; }
+.feature-intro { display: grid; gap: 2rem; }
+.feature-text-plain { display: block; }
+.feature-duo { display: grid; gap: 1.5rem; }
+.feature-duo img { aspect-ratio: 3 / 2; }
+.feature-text .ed-quote { margin-bottom: 1.5rem; max-width: 16ch; }
+.feature-text p.ed-quote { font-size: clamp(1.75rem, 4.4vw, 3.25rem); line-height: 1.15; }
+.feature-single-text .text-link { display: inline-block; margin-top: 0.5rem; }
+.feature-reel h2 { font: 500 1rem var(--font-display); letter-spacing: 0; color: var(--stone); margin: 0 0 1rem; }
+.feature-reel .project-embed { min-height: 0; padding: 2rem 1.5rem; }
+@media (min-width: 900px) {
+  .feature-intro, .feature-duo { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 1.5rem; }
+  .feature-intro .feature-text { grid-column: 1 / span 6; }
+  .feature-intro .feature-text > * { grid-column: auto; }
+  .feature-intro .feature-facts { grid-column: 9 / span 4; align-self: start; }
+  .feature-duo-a { grid-column: 1 / span 7; }
+  .feature-duo-b { grid-column: 9 / span 4; align-self: end; margin-bottom: -3rem; }
+}
+
+main > section.about-ed { display: grid; gap: 2rem; padding-block: clamp(2.5rem, 7vw, 5rem); }
+.about-ed h1 { font: italic 400 clamp(1.875rem, 4.6vw, 3.5rem)/1.12 var(--font-body); letter-spacing: -0.01em; max-width: 20ch; }
+.about-ed-photo { max-width: 20rem; background: var(--concrete); }
+.about-ed-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+.about-ed-text h2 { font: 500 1rem var(--font-display); letter-spacing: 0; color: var(--stone); margin: 2.25rem 0 0.75rem; }
+.about-ed-text h2:first-child { margin-top: 0; }
+.about-ed-text p { max-width: 38ch; font-size: clamp(1.0625rem, 1.5vw, 1.1875rem); }
+@media (min-width: 900px) {
+  main > section.about-ed { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 1.5rem; row-gap: clamp(2.5rem, 5vw, 4rem); }
+  .about-ed-head { grid-column: 1 / span 10; }
+  .about-ed-photo { grid-column: 1 / span 4; max-width: none; align-self: start; position: sticky; top: 2rem; }
+  .about-ed-text { grid-column: 7 / span 6; }
+}
